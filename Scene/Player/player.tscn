@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bke6kyjap8vo5"]
+
+[ext_resource type="Texture2D" uid="uid://cu1h0io7cva4r" path="res://Sprites/Player/Player-rpg.png" id="1_npt48"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ecen8"]
+radius = 7.07107
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_npt48")
+hframes = 12
+vframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_ecen8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
